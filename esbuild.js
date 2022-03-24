@@ -1,12 +1,19 @@
 import esbuild from "esbuild";
 import { sassPlugin } from "esbuild-sass-plugin";
+import htmlPlugin from "@chialab/esbuild-plugin-html";
 
 await esbuild
   .build({
-    entryPoints: ["src/styles/style.scss", "src/scripts/app.jsx"],
+    entryPoints: [
+      "src/index.html",
+      "src/about.html",
+      "src/styles/style.scss",
+      "src/scripts/app.jsx",
+    ],
     outdir: "docs",
     bundle: true,
-    plugins: [sassPlugin()],
+    minify: true,
+    plugins: [sassPlugin(), htmlPlugin()],
   })
   .then(() => console.log("⚡ Build complete! ⚡"))
   .catch(() => process.exit(1));

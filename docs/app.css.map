@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../src/public/style.css"],
-  "sourcesContent": ["body {\n  background-color: red;\n}\n"],
-  "mappings": "AAAA,KACE",
-  "names": []
-}
