@@ -1,4 +1,4 @@
-import "./style.css";
+import "../styles/style.scss";
 import * as React from "react";
 import * as Server from "react-dom/server";
 
